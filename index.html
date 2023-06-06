@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+    <main>
+        <div class="divForm">
+            <form>
+                <div class="one">
+
+                    <div class="editarInputs">
+                        <label for="name">Nome:</label>
+                        <input class="limpar" type="text" name="name" minlength="5" placeholder="Digite seu nome" width="30px" autofocus required>
+                    </div>
+
+                    <div class="editarInputs">
+                        <label for="senha">Senha:</label>
+                        <input class="limpar" type="password" name="senha" maxlength="15" minlength="5" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="editarInputs">
+                        <label for="email">Email:</label>
+                        <input class="limpar" type="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+
+                </div>
+
+                <div class="one">
+
+                    <div class="editarInputs">
+                        <label for="CPF">CPF:</label>
+                        <input class="limpar" type="number" name="CPF" placeholder="000.000.000.00"  required>
+                    </div>
+
+
+                    <div class="editarInputs">
+                        <label for="telefone">Telefone:</label>
+                        <input class="limpar" type="number" name="telefone" placeholder="00-00000-0000" required>
+                    </div>
+
+                    <div class="editarInputs">
+                        <label for="Data">Data de nascimento:</label>
+                        <input class="limpar" type="date" name="Data" required> <br> <br>
+                    </div>
+                </div>
+
+                <div class="one">
+
+                    <div class="arrumarInput" >
+                        <p>Sexo:</p>
+                        <input type="radio" id="male" name="genero" value="masculino">
+                        <label for="male">Masculino</label>
+
+                        <input type="radio" id="female" name="genero" value="feminino">
+                        <label for="female">Feminino</label>
+                    </div>
+
+                    <div class="arrumarInput">
+                        <p>Estado civil:</p>
+                        <input type="radio" id="Solteiro" name="estadocivil" value="Solteiro">
+                        <label for="Solteiro">Solteiro</label>
+
+                        <input type="radio" id="Casado" name="estadocivil" value="Casado">
+                        <label for="Casado">Casado</label>
+                    </div>
+                </div>
+
+
+                <div class="one">
+                    <div class="editarInputs">
+                        <p>Profissão:</p>
+                        <select name="Profissão" id="Profissão" required>
+                            <option value="1">Estudante</option>
+                            <option value="2">Engenheiro de Software</option>
+                            <option value="3">Professor</option>
+                            <option value="4">Pentester</option>
+                            <option value="5">Técnico em Informatica</option>
+                        </select>
+                    </div>
+
+                    <div class="editarInputs">
+                        <p>Renda mensal:</p>
+                        <select name="RendaMensal" id="RendaMensal" required>
+                            <option value="1">1 a 2 salarios mínimos</option>
+                            <option value="2">3 a 5 salarios mínimos</option>
+                            <option value="3">6 a 10 salarios mínimos</option>
+                            <option value="4">10 a 20 salarios mínimos</option>
+                            <option value="5">mais de 20 salarios mínimos</option>
+                        </select>
+                    </div>
+
+                    <div class="editarInputs">
+                        <p>Dependentes:</p>
+                        <select name="Dependentes" id="Dependentes" required>
+                            <option value="1">não tem dependentes</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">mais de 5</option>
+                        </select>
+                    </div>
+                    <div class="editarInputs">
+                        <p>Escolaridade:</p>
+                        <select name="Escolaridade" id="Escolaridade" required>
+                            <option value="1" selected>Educação Infantil</option>
+                            <option value="2">Fundamental</option>
+                            <option value="3">Ensino Médio</option>
+                            <option value="4">Superior</option>
+                            <option value="5">Pós-graduação</option>
+                            <option value="6">Mestrado</option>
+                            <option value="7">Doutorado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="one" id="oneDiff">
+                    <div class="editarInputs">
+                        <p>Estado:</p>
+                        <select name="Localização" id="estado" onchange="atualizarCidades()" required>
+                            
+                        </select>
+                    </div>
+
+                    <div class="editarInputs">
+                        <p>Cidade:</p>
+                        <select name="Cidade" id="cidade" required>
+                            
+                        </select>
+                    </div>
+
+                    <input type="submit" name="Enviar" onclick="mensagem()">
+
+                    <input type="button" name="Limpar" value="Limpar" onclick="limparInputs()">
+
+                    <input type="button" name="color" value="TrocarCor" onclick="trocarCor()">
+
+                </div>
+            </form>
+        </div>
+
+        <div class="titulo">
+            <h1>Formulário de <span> Cadastro! </span></h1>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
