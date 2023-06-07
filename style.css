@@ -41,7 +41,7 @@ main .titulo h1 {
 
 .divForm {
     margin: 50px;
-    width: calc(900px/16);
+    width: 900px;
     height: 500px;
     padding: 10px;
     border-radius: 10px;
